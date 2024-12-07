@@ -49,11 +49,11 @@
   "Writes the latest exchange rate table to a file."
   (condition-case err
       (let ((rate-list (funcall calc-currency-backend-function calc-currency-base-currency)))
-        (write-region
-         (pp rate-list)
-         nil
-         calc-currency-exchange-rates-file)
-        (message "Fetched new exchange rates!")
+        (with-temp-buffer
+          (insert ";;; -*- lisp-data -*-\n")
+          (print rate-list (current-buffer))
+          (write-file calc-currency-exchange-rates-file)
+          (message "Fetched new exchange rates!"))
         t)
     (error
      (message (format "Error updating; using existing rates instead: [%s]" err)))))
