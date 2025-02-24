@@ -3,6 +3,7 @@
 ;; Keywords: calc, currency, exchange
 ;; Homepage: https://github.com/jws85/calc-currency
 ;; Package-Requires: (cl-lib f)
+;; Version: 1.0.0
 
 ;;; Commentary:
 
