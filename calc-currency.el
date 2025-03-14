@@ -2,8 +2,8 @@
 ;; Author: J. W. Smith <jwsmith2spam at gmail dot com>
 ;; Keywords: calc, currency, exchange
 ;; Homepage: https://github.com/jws85/calc-currency
-;; Package-Requires: (cl-lib f)
 ;; Version: 1.0.0
+;; Package-Requires: ((cl-lib "0.7") (f "0.21.0"))
 
 ;;; Commentary:
 
