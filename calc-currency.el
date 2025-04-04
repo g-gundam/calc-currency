@@ -91,6 +91,12 @@ user-specified number of days."
     (setq math-additional-units (append math-additional-units (nth 2 (calc-currency-read-file)))
           math-units-table nil)))
 
+(defun calc-currency-update-rates ()
+  "Update the currently loaded exchange rates."
+  (interactive)
+  (calc-currency-update-file)
+  (calc-currency-load))
+
 (provide 'calc-currency)
 
 ;;; calc-currency.el ends here
